@@ -53,7 +53,7 @@ def tablesfinder(sqldatafile):
                 pass
             
         """ This piece of code was a try for rows count
-        it stuck during multiple INSERTS between different table names, 
+        it stuck during multiple INSERTS between different tables names, 
         but there is a ways to fix it if having a time and motivation for
         
         ii=-1
