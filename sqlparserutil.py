@@ -4,12 +4,15 @@
 import re
 import csv
 
+""" sql files used for testing
+
 sqlfile1 = "Sample-SQL-File-500000-Rows.sql"
 test1 = "database/test.sql"
 test2 = "database/test3.sql"
 test3 = "database/test4.sql"
 test_list = [sqlfile1, test1, test2, test3]
-sqlfile = test_list[2]
+sqlfile = test_list[2] 
+"""
 
 
 def sqlreader(sqlfile):
@@ -48,6 +51,10 @@ def tablesfinder(sqldatafile):
                 inserts_table_names.append(columns_names[1])
             else:
                 pass
+            
+        """ This piece of code was a try for rows count
+        it stuck during multiple INSERTS between different table names, 
+        but there is a ways to fix it if having a time and motivation for
         
         ii=-1
         insert_index = []
@@ -76,13 +83,12 @@ def tablesfinder(sqldatafile):
             #if columns_names[1] == 
             #rows_sum += insert.count('\n')
             #print('Amount of Rows in Table "{}": {}\n'.format(table_names[i], rows_sum))
-
+            """
+        
     else:
         print('No Tables detected\n')
 
 
-#for sql in test_list:
-#    sqlfileparser(sql)
 def main():
     tablesfinder(sqlreader(sqlfile))
 
